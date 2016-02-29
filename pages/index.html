@@ -1,0 +1,34 @@
+<!-- index.html -->
+{% extends "base.html" %} <!-- we're extending the base template --> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/2.3.0/nunjucks.js"></script>
+{% block title %}This is the new title of our webpage{% endblock %} 
+{% block content %}
+
+<p>	<b>Videos getting rendered from nunjucks (HTML5 Player)</b></p>
+
+<div class="gallery">  
+ {% for videos in video %}
+ <div>
+  <video width="320" height="240" controls>
+  <source src="{{videos.src}}" type="video/mp4">
+  </video>
+	</div>
+  {% endfor %}
+</div>
+
+
+<div id="player"></div>
+
+{% for jwvideos in jwvideo %}
+<script type="text/javascript">
+var p=jwplayer({{jwvideos.id}});
+p.setup({ 
+file: {{jwvideos.file}},
+  title: 'Movie BBB',
+  mediaid: '123456',
+  description:'Polarbear animation'
+})
+</script>
+{% endfor %}
+{% endblock %} 
+
