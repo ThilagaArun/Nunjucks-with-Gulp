@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <title>
+      This is the new title of our webpage <!-- we'll change the title -->
+    </title>
+ 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://jwpsrv.com/library/cpajHG5SEeOpQCIACi0I_Q.js">jwplayer.key="ih4xYnIa6x0EW8AlLYuNl1dyLjWVZ1fcKS+x2Q==";</script>
+  </head>
+ 
+  <body> 
+    <div class="container container-fluid">       
+
+<p>	<b>Videos getting rendered from nunjucks (HTML5 Player)</b></p>
+<div class="gallery">  
+</div>
+<div id="player"></div>
+<script type="text/javascript">
+var p=jwplayer('player');
+p.setup({ 
+file: '../video/mov_bbb.mp4',
+  title: 'Movie BBB',
+  mediaid: '123456',
+  description:'Polarbear animation'
+})
+</script>
+    </div> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
